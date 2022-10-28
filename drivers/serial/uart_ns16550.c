@@ -297,8 +297,7 @@ static void set_baud_rate(const struct device *dev, uint32_t baud_rate, uint32_t
 		 * calculate baud rate divisor. a variant of
 		 * (uint32_t)(pclk / (16.0 * baud_rate) + 0.5)
 		 */
-		divisor = ((pclk + (baud_rate << 3))
-					/ baud_rate) >> 4;
+		divisor = (pclk / (baud_rate << 4));
 
 		/* set the DLAB to access the baud rate divisor registers */
 		lcr_cache = INBYTE(LCR(dev));
