@@ -1,0 +1,31 @@
+# RISCV_CVA6 SOC implementation
+
+# Copyright (c) 2022 Kevin Eyssartier <kevin.eyssartier@thalesgroup.com>
+# SPDX-License-Identifier: Apache-2.0
+
+choice
+	prompt "CVA6 SOC implementation"
+	depends on SOC_SERIES_RISCV_CVA6
+
+config SOC_RISCV_CV32A6
+	bool "CV32A6 SOC implementation"
+	select INCLUDE_RESET_VECTOR
+	select RISCV_ISA_RV32I
+	select RISCV_ISA_EXT_M
+	select RISCV_ISA_EXT_A
+	select RISCV_ISA_EXT_ZICSR
+	select RISCV_ISA_EXT_ZIFENCEI
+
+config SOC_RISCV_CV64A6
+	bool "CV64A6 SOC implementation"
+	select ATOMIC_OPERATIONS_C
+	select INCLUDE_RESET_VECTOR
+	select 64BIT
+	select RISCV_ISA_RV64I
+	select RISCV_ISA_EXT_M
+	select RISCV_ISA_EXT_A
+	select RISCV_ISA_EXT_C
+	select RISCV_ISA_EXT_ZICSR
+	select RISCV_ISA_EXT_ZIFENCEI
+
+endchoice

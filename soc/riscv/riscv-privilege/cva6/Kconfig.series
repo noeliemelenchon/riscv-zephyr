@@ -1,0 +1,11 @@
+# RISCV_CVA6 SOC implementation
+
+# Copyright (c) 2022 Kevin Eyssartier <kevin.eyssartier@thalesgroup.com>
+# SPDX-License-Identifier: Apache-2.0
+
+config SOC_SERIES_RISCV_CVA6
+	bool "CVA6 SOC implementation"
+	select RISCV
+	select SOC_FAMILY_RISCV_PRIVILEGE
+	help
+	  Enable support for CVA6 SOC
