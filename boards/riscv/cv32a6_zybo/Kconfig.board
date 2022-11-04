@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
 
-config BOARD_CV32A6_ZEBU
-	bool "CV32A6 Zebu target"
+config BOARD_CV32A6_ZYBO
+	bool "CV32A6 Zybo target"
 	depends on SOC_RISCV_C32VA6

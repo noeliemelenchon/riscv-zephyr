@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 config BOARD
-	default "cv32a6_zebu"
+	default "cv32a6_zybo"
 
 config SYS_CLOCK_TICKS_PER_SEC
 	default 128
